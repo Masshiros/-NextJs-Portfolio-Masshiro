@@ -1,0 +1,184 @@
+@import url('../fonts/stylesheet.css');
+
+$fiveBoroughs: 'five_boroughs_handwritingRg', sans-serif;
+$louisGeorgeRegular: 'louis_george_caferegular', sans-serif;
+$louisGeorgeBold: 'louis_george_cafebold', sans-serif; //colors
+
+// @import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+// //Fonts
+// $font: 'Muli',
+// sans-serif;
+// $font2:'Space Mono',
+// monospace;
+
+$textMaxWidth: 720px;
+
+.center {
+    text-align: center;
+}
+
+
+@mixin font-giant {
+    @include textMargins;
+    max-width: $textMaxWidth;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 88px;
+
+    @include sm {
+        font-size: 52px;
+        line-height: 60px;
+    }
+}
+
+@mixin font-xxl {
+    @include textMargins;
+    max-width: $textMaxWidth;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 68px;
+
+    @include sm {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+
+@mixin font-xl {
+    @include textMargins;
+    max-width: $textMaxWidth;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 58px;
+
+    @include sm {
+        font-size: 30px;
+        line-height: 46px;
+    }
+}
+
+@mixin font-l {
+    @include textMargins;
+    max-width: $textMaxWidth;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+
+    @include sm {
+        font-size: 22px;
+        line-height: 36px;
+    }
+}
+
+@mixin font-m {
+    @include textMarginsSmall;
+    max-width: $textMaxWidth;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+
+    @include sm {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@mixin font-s {
+    @include textMarginsSmall;
+    max-width: $textMaxWidth;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+@mixin font-xs {
+    @include textMarginsSmall;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+// Default Styles
+
+@mixin textMargins {
+    margin-top: 32px;
+
+    @include sm {
+        margin-top: 24px;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+@mixin textMarginsSmall {
+    margin-top: 24px;
+
+    @include sm {
+        margin-top: 16px;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+@mixin ctaStyle {
+    margin-top: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+// Default Text Styles for Modules
+
+@mixin moduleDefault {
+    &__heading {
+        text-align: center;
+        margin-bottom: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include sm {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        @include font-xl;
+
+        //color: $m-01;
+
+        .white {
+            color: white;
+        }
+    }
+
+    &__subtitle {
+        @include font-m;
+    }
+
+    &__description {
+        @include font-s;
+    }
+}
+
+.base__title {
+    font-family: $louisGeorgeBold;
+    font-size: calc(32px + 28 * ((100vw - 320px) / 1120));
+    letter-spacing: 10px;
+    text-align: left;
+    margin-bottom: 64px;
+    margin-top: 64px;
+
+    @include sm {
+        margin-bottom: 48px;
+        margin-top: 48px;
+    }
+}

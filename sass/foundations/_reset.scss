@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    background-color: transparent;
+    line-height: 1;
+
+    &:focus {
+        outline: 0;
+    }
+}

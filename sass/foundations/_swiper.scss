@@ -1,0 +1,128 @@
+// Containers
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+
+    figure {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+
+// Bullets 
+.swiper-pagination {
+    bottom: 24px !important;
+}
+
+.swiper-pagination-bullet {
+    @include transition;
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+    margin: 0px 8px !important;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 5px $neu-07;
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    box-shadow: inset 0px 0px 0px 2px $neu-07;
+    opacity: 1;
+    border-radius: 6px;
+
+
+}
+
+// Arrows
+.swiper-button-prev,
+.swiper-button-next {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    top: calc(50% - 16px);
+
+    &:after {
+        @include transition2();
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    @include sm {
+        // display: none;
+    }
+}
+
+.swiper-button-prev {
+    left: 5%;
+
+    &:after {
+        background-image: url("../../assets/icons-base/arrow-left-color.svg");
+    }
+
+    &:hover {
+        &:after {
+            transform: translateX(-4px);
+        }
+    }
+}
+
+.swiper-button-next {
+    right: 5%;
+
+    &:after {
+        background-image: url("../../assets/icons-base/arrow-right-color.svg");
+    }
+
+    &:hover {
+        &:after {
+            transform: translateX(4px);
+        }
+    }
+}
+
+// When Bullets and Arrows need to be white
+
+.white {
+
+    .swiper-pagination-bullet {
+        opacity: 0.4;
+        box-shadow: inset 0px 0px 0px 5px white;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: transparent;
+        box-shadow: inset 0px 0px 0px 2px $m-02;
+    }
+
+    .swiper-button-prev {
+        &:after {
+            background-image: url("../../assets/icons-base/arrow-left-white.svg");
+        }
+    }
+
+    .swiper-button-next {
+        &:after {
+            background-image: url("../../assets/icons-base/arrow-right-white.svg");
+        }
+    }
+}

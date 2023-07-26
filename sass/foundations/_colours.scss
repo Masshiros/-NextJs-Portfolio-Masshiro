@@ -1,0 +1,163 @@
+// Main Colours
+$m-01: #4c4b85;
+$m-02: #9b62ca;
+
+$lightBlack: #252525;
+$darkBlack: #202020;
+$blue: #4758fc;
+
+// Neutral Colours
+$neu-01: #ffffff;
+$neu-02: #F5F5F6;
+$neu-03: #ECEDEE;
+$neu-04: #E0E0E2;
+$neu-05: #CECFD2;
+$neu-06: #B4B4BA;
+$neu-07: #7F8088;
+$neu-08: #5C5C66;
+$neu-09: #363842;
+
+$g-01: linear-gradient(148deg, $m-01, $m-02);
+$g-02: linear-gradient(45deg, $m-01, $m-02);
+
+@mixin cta01 {
+    background-color: $neu-08;
+    color: white;
+}
+
+@mixin cta01alt {
+    background-color: white;
+    color: $neu-08;
+}
+
+@mixin cta02 {
+    border: solid 1px $neu-08;
+    color: $neu-08;
+}
+
+@mixin cta02alt {
+    border: solid 1px white;
+    color: white;
+}
+
+.neu-01 {
+    background-color: $neu-01;
+    color: $neu-08;
+
+    .cta01 {
+        @include cta01;
+    }
+
+    .cta02 {
+        @include cta02;
+    }
+}
+
+.neu-02 {
+    background-color: $neu-02;
+    color: $neu-08;
+
+    .cta01 {
+        @include cta01;
+    }
+
+    .cta02 {
+        @include cta02;
+    }
+}
+
+.neu-03 {
+    background-color: $neu-03;
+    color: $neu-08;
+
+    .cta01 {
+        @include cta01;
+    }
+
+    .cta02 {
+        @include cta02;
+    }
+}
+
+.neu-04 {
+    background-color: $neu-04;
+    color: $neu-08;
+
+    .cta01 {
+        @include cta01;
+    }
+
+    .cta02 {
+        @include cta02;
+    }
+}
+
+.neu-05 {
+    background-color: $neu-05;
+    color: $neu-08;
+
+    .cta01 {
+        @include cta01;
+    }
+
+    .cta02 {
+        @include cta02;
+    }
+}
+
+.neu-06 {
+    background-color: $neu-06;
+    color: white;
+
+    .cta01 {
+        @include cta01alt;
+    }
+
+    .cta02 {
+        @include cta02alt;
+    }
+}
+
+.neu-07 {
+    background-color: $neu-07;
+    color: white;
+
+
+    .cta {
+        &.cta01 {
+            @include cta01alt;
+        }
+
+        &.cta02 {
+            @include cta02alt;
+        }
+    }
+}
+
+.neu-08 {
+    background-color: $neu-08;
+    color: white;
+
+    .cta {
+        &.cta01 {
+            @include cta01alt;
+        }
+
+        &.cta02 {
+            @include cta02alt;
+        }
+    }
+}
+
+.neu-09 {
+    background-color: $neu-09;
+    color: white;
+
+    .cta01 {
+        @include cta01alt;
+    }
+
+    .cta02 {
+        @include cta02alt;
+    }
+}
