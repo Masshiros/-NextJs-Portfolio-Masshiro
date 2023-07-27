@@ -3,6 +3,7 @@ export const projects = [
     id: 0,
     name: "Project 01",
     labels: ["React.js", "Javascript", "Sass"],
+    category: "fe",
     image: require("./assets/images/project-01.png"),
     imagesSlider: [
       {
@@ -27,6 +28,7 @@ export const projects = [
     id: 1,
     name: "Project 02",
     labels: ["Html", "Javascript", "Sass", "Nextjs"],
+    category: "fe",
     image: require("./assets/images/project-02.png"),
     imagesSlider: [
       {
@@ -51,6 +53,7 @@ export const projects = [
     id: 2,
     name: "Project 03",
     labels: ["Html", "Javascript", "Sass", "Nextjs"],
+    category: "be",
     image: require("./assets/images/project-03.png"),
     imagesSlider: [
       {
@@ -75,6 +78,7 @@ export const projects = [
     id: 3,
     name: "Project 04",
     labels: ["Html", "Javascript", "Sass", "Nextjs"],
+    category: "be",
     image: require("./assets/images/project-04.png"),
     imagesSlider: [
       {
@@ -99,6 +103,7 @@ export const projects = [
     id: 4,
     name: "Project 05",
     labels: ["Html", "Javascript", "Sass", "Nextjs"],
+    category: "fe",
     image: require("./assets/images/project-05.png"),
     imagesSlider: [
       {
@@ -123,10 +128,11 @@ export const projects = [
     id: 5,
     name: "Project 06",
     labels: ["Html", "Javascript", "Sass", "Nextjs"],
+    category: "be",
     image: require("./assets/images/project-06.png"),
     imagesSlider: [
       {
-        image: require("./assets/images/project-04.png"),
+        image: require("./assets/images/project-06.png"),
         description: "alt",
       },
       {

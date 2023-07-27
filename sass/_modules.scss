@@ -445,6 +445,17 @@ header {
   animation: mobileText 0.5s ease;
   animation-fill-mode: forwards;
 
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -578,15 +589,20 @@ header {
 }
 
 .btnChangePerspective {
-  position: absolute;
-  top: -4px;
-  right: 12px;
-  z-index: 5;
+  // position: absolute;
+  // top: -4px;
+  // right: 12px;
+  // z-index: 5;
   cursor: pointer;
+  margin-right: 8px;
 
-  @include sm {
-    display: none;
+  &:last-child {
+    margin-right: 0px;
   }
+
+  // @include sm {
+  //   display: none;
+  // }
 
   :root {
     --rotateX: 0;
@@ -604,12 +620,17 @@ header {
       rotateY(var(--rotateY)) scale3d(1, 1, 1);
     cursor: pointer;
 
+    @include sm {
+      width: 80px;
+      height: 26px;
+    }
+
     span {
       font-size: 16px;
       transition: all 0.3s ease;
     }
 
-    &:hover {
+    &:hover, &.active {
       background: $blue;
       box-shadow: 0 0 20px 5px rgba($blue, 0.2);
 

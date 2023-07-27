@@ -1,10 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { projects } from "../data";
 
 const Projects = () => {
-  // console.log(projects[0].image.default);
+  const [data, setData] = useState(projects);
+  const [category, setCategory] = useState("all");
+  useEffect(() => {
+    setData(data);
+  }, [data]);
+
+  const handleFilter = (category) => {
+    const dataFilters = projects.filter((p) => p.category === category);
+    setData(dataFilters);
+    setCategory(category);
+  };
+
   return (
     <>
       <Head>
@@ -14,9 +25,50 @@ const Projects = () => {
       </Head>
       <div className="wrapper">
         <section className="projects">
-          <h1 className="base__title">Projects</h1>
+          <header className="projects__header">
+            <h1 className="base__title">Projects</h1>
+            <div className="projects__filters">
+              <div
+                className="btnChangePerspective"
+                onClick={() => handleFilter("fe")}
+              >
+                <button
+                  type="button"
+                  name="button"
+                  className={category === "fe" ? "active" : ""}
+                >
+                  <span>Frontend</span>
+                </button>
+              </div>
+              <div
+                className="btnChangePerspective"
+                onClick={() => handleFilter("be")}
+              >
+                <button
+                  type="button"
+                  name="button"
+                  className={category === "be" ? "active" : ""}
+                >
+                  <span>Backend</span>
+                </button>
+              </div>
+              <div className="btnChangePerspective">
+                <button
+                  className={category === "all" ? "active" : ""}
+                  type="button"
+                  name="button"
+                  onClick={() => {
+                    setData(projects);
+                    setCategory("all");
+                  }}
+                >
+                  <span>All</span>
+                </button>
+              </div>
+            </div>
+          </header>
           <div className="projects__container">
-            {projects.map((project) => (
+            {data.map((project) => (
               <article
                 key={project.id}
                 className="project"
@@ -24,7 +76,10 @@ const Projects = () => {
                   backgroundImage: `url(${project.image.default.src})`,
                 }}
               >
-                <Link href={`/projectDetail/${project.id}`} className="project__linkContainer">
+                <Link
+                  href={`/projectDetail/${project.id}`}
+                  className="project__linkContainer"
+                >
                   <div className="project__container">
                     <h3 className="project__name">
                       {project.name}
@@ -37,11 +92,6 @@ const Projects = () => {
           </div>
           {/* <div className="base__seeMore">
             <a href="">See More</a>
-          </div>
-          <div className="btnChangePerspective">
-            <button type="button" name="button">
-              <span>3D Mode</span>
-            </button>
           </div> */}
         </section>
       </div>
