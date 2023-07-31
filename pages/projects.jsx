@@ -40,7 +40,7 @@ const Projects = () => {
                   <span>Frontend</span>
                 </button>
               </div>
-              
+
               <div
                 className="btnChangePerspective"
                 onClick={() => handleFilter("be")}
@@ -55,7 +55,7 @@ const Projects = () => {
               </div>
               <div
                 className="btnChangePerspective"
-                onClick={() => handleFilter("be")}
+                onClick={() => handleFilter("bc")}
               >
                 <button
                   type="button"
