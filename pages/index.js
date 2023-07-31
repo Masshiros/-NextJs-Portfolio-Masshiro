@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Head from "next/head";
 import BackgroundImage from "../assets/images/background.jpg";
 import Image from "next/image";

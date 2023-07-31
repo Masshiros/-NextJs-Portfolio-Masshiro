@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Head from "next/head";
 import React from "react";
 
@@ -14,16 +15,16 @@ const About = () => {
           <h1 className="base__title">About Me</h1>
 
           <p className="about__description">
-            20 year old creative soul based in HCM, I'm a Back-End
-            Developer. <br />
-            Currently, I major in Software Engineering and act as
-            a sophomore in Greenwich University. Being a creative and curious
-            person, I'm always seeking for new challenges. So, a couple of years
-            ago, I decided to learn how to code. I started with the basic HTML
-            and CSS stuff. After awhile I started learning some Vanilla
-            Javascript too, I found that logic resolution is my cup of tea,
-            so I decided to learn Back-end development. Want to know even more about
-            me? Drop me an e-mail or follow me on the socials bellow.
+            20 year old creative soul based in HCM, I am a Back-End Developer.{" "}
+            <br />
+            Currently, I major in Software Engineering and act as a sophomore in
+            Greenwich University. Being a creative and curious person, I am
+            always seeking for new challenges. So, a couple of years ago, I
+            decided to learn how to code. I started with the basic HTML and CSS
+            stuff. After awhile I started learning some Vanilla Javascript too,
+            I found that logic resolution is my cup of tea, so I decided to
+            learn Back-end development. Want to know even more about me? Drop me
+            an e-mail or follow me on the socials bellow.
           </p>
           <div className="about__container"></div>
           <div className="iconContainer">
