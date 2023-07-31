@@ -14,15 +14,15 @@ const About = () => {
           <h1 className="base__title">About Me</h1>
 
           <p className="about__description">
-            27 year old creative soul based in Ca Mau, I'm a Front-End
+            20 year old creative soul based in HCM, I'm a Back-End
             Developer. <br />
-            With a degree in Information Technology engineer, I'm aboard on all
-            the cool coding shenanigans now! Being a creative and curious
+            Currently, I major in Software Engineering and act as
+            a sophomore in Greenwich University. Being a creative and curious
             person, I'm always seeking for new challenges. So, a couple of years
             ago, I decided to learn how to code. I started with the basic HTML
             and CSS stuff. After awhile I started learning some Vanilla
-            Javascript too, to help me even more with all the interactions and
-            crazy stuff I had around in my mind. Want to know even more about
+            Javascript too, I found that logic resolution is my cup of tea,
+            so I decided to learn Back-end development. Want to know even more about
             me? Drop me an e-mail or follow me on the socials bellow.
           </p>
           <div className="about__container"></div>

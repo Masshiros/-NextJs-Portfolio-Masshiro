@@ -40,6 +40,7 @@ const Projects = () => {
                   <span>Frontend</span>
                 </button>
               </div>
+              
               <div
                 className="btnChangePerspective"
                 onClick={() => handleFilter("be")}
@@ -50,6 +51,18 @@ const Projects = () => {
                   className={category === "be" ? "active" : ""}
                 >
                   <span>Backend</span>
+                </button>
+              </div>
+              <div
+                className="btnChangePerspective"
+                onClick={() => handleFilter("be")}
+              >
+                <button
+                  type="button"
+                  name="button"
+                  className={category === "bc" ? "active" : ""}
+                >
+                  <span>Blockchain</span>
                 </button>
               </div>
               <div className="btnChangePerspective">

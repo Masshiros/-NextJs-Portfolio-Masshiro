@@ -15,7 +15,7 @@ const Home = () => {
             <h1 className="base__title">
               Nguyên <br /> Vũ <span>_</span>
             </h1>
-            <h2 className="home__subTitle">Front-End Developer</h2>
+            <h2 className="home__subTitle">Back-End Developer</h2>
             <div className="iconContainer">
               <a href="/" className="icon">
                 <span className="iconName">GitHub</span>
@@ -80,8 +80,8 @@ const Home = () => {
                 src={BackgroundImage}
                 className="illustrationImage"
                 alt=""
-                fill
-                sizes="100vw"
+                layout="fill"
+                sizes="50vw"
                 priority
               />
             </div>
