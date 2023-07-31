@@ -90,10 +90,15 @@ const ProjectDetail = () => {
                 </div>
               </div>
               <div className="projectDetail__links">
-                <a href={project.liveSite} className="margin" target="_blank">
+                <a
+                  href={project.liveSite}
+                  className="margin"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Go to Site
                 </a>
-                <a href={project.liveCode} target="_blank">
+                <a href={project.liveCode} target="_blank" rel="noreferrer">
                   Code in Github
                 </a>
               </div>
